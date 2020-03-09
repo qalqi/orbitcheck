@@ -6,9 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "ipfs": "github:qalqi/js-ipfs#reactnativebranch",
+    "orbit-db": "^0.23.1",
+    "orbit-db-access-controllers": "github:social-network/orbit-db-access-controllers#010eaa597b39fb78cc7542c6d4ec8cb32c73b8f7",
+    "orbit-db-identity-provider": "github:social-network/orbit-db-identity-provider#09beeedc9dce30bf3d2332ceae2f0f34315e0b01",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.4",
+    "mobx-utils": "^5.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
