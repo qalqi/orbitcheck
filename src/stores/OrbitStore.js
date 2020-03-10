@@ -72,7 +72,7 @@ class OrbitStore {
         this.orbit = await OrbitDB.createInstance(this.ipfs, orbitOptions);
 
 
-        const kv = await this.orbit.kvstore('settings', {
+        const kv = await this.orbit.kvstore('settings1', {
             accessController: {
                 type: PolkaIdentityProvider.type,
                 write: [orbitOptions.id]
@@ -105,7 +105,7 @@ class OrbitStore {
             meta: { from: 'this.userProfile', type: 'text', ts: new Date().getTime() }
         }
 
-        let channelName = 'globalChannel';
+        let channelName = 'globalChannel1';
         console.log(channelOptions)
         const feed = await this.orbit.log(channelName, channelOptions)
          feed.load()
@@ -122,8 +122,10 @@ class OrbitStore {
         console.log(`Joined #${channelName}, ${feed.address.toString()}`)
 
         await feed.load()
-        feed.add(data)
 
+        setInterval(async () => {
+            await feed.add(data)
+          }, 10000)
 
     }
 
