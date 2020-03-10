@@ -107,7 +107,7 @@ class OrbitStore {
         this.orbit = await OrbitDB.createInstance(this.ipfs, orbitOptions);
 
 
-        const kv = await this.orbit.kvstore('settings1', {
+        const kv = await this.orbit.kvstore('settings', {
             accessController: {
                 type: PolkaIdentityProvider.type,
                 write: [orbitOptions.id]
