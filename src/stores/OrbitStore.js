@@ -136,11 +136,11 @@ class OrbitStore {
         )
 
         const data = {
-            content: ' Hello world v2',
+            content: ' Hello world from: ' + window.navigator.userAgent,
             meta: { from: 'this.userProfile', type: 'text', ts: new Date().getTime() }
         }
 
-        let channelName = 'globalChannel1';
+        let channelName = 'globalChannel3';
         console.log(channelOptions)
         const feed = await this.orbit.log(channelName, channelOptions)
          feed.load()
@@ -160,7 +160,7 @@ class OrbitStore {
 
         setInterval(async () => {
             await feed.add(data)
-          }, 10000)
+          }, 30000)
 
     }
 
