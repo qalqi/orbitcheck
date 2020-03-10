@@ -100,13 +100,15 @@ class OrbitStore {
         )
 
         const data = {
-            content: ' Hello world',
+            content: ' Hello world v2',
             meta: { from: 'this.userProfile', type: 'text', ts: new Date().getTime() }
         }
 
         let channelName = 'globalChannel';
         console.log(channelOptions)
         const feed = await this.orbit.log(channelName, channelOptions)
+         feed.load()
+
         this.feed = feed;
 
 

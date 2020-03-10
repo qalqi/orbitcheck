@@ -24,7 +24,7 @@ class App extends Component {
         </div>
 
         <div>
-          {getItems.map((item, id) => <div key={id}>{'Message ' + id + ' :'}{JSON.stringify(item)}</div>)}
+          {getItems.map((item, id) => <div className="Key-Text" key={id}>{'Message ' + id + ' :'}{JSON.stringify(item)}</div>)}
         </div>
         <div>
         </div>
