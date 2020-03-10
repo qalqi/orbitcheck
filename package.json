@@ -2,6 +2,7 @@
   "name": "orbitcheck",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://qalqi.github.io/orbitcheck/",
   "dependencies": {
     "@tabcat/ipfs-bundle-t": "github:qalqi/ipfs-bundle-t#684db5a37c2ce564b15e2dbe6d80668aee346136",
     "@testing-library/jest-dom": "^4.2.4",
