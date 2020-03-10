@@ -138,7 +138,7 @@ class OrbitStore {
         console.log('channelEvent', eventName, channelName, ...args)
 
         if (eventName === 'ready') {
-            const items = this.feed.iterator().collect().map(e => e.payload.value)
+            const items = this.feed.iterator({limit: -1}).collect().map(e => e.payload.value)
             console.log(items, 'ready');
             this.items = items;
         }
