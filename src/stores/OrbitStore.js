@@ -87,6 +87,7 @@ class OrbitStore {
             console.log(kv.get('volume'))
             // 100
         });
+        await kv.load()
 
 
 
@@ -120,6 +121,7 @@ class OrbitStore {
 
         console.log(`Joined #${channelName}, ${feed.address.toString()}`)
 
+        await feed.load()
         feed.add(data)
 
 
